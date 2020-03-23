@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+      <div>{{username}}</div>
+      <div>{{age}}</div>
+      <div v-text="sex"></div>
+      <button @click="handleclick">点击</button>
+    </div>
+</body>
+</html>
+<script src="./compile.js"></script>
+<script src="./index.js"></script>
+<script src="./Dep.js"></script>
+<script src="./Watcher.js"></script>
+<script>
+ var vm=new minivue({
+    el:"#app",
+    data:{
+       username:"xiaoming",
+       age:18,
+       sex:"男",
+    },
+    methods:{
+        handleclick(){
+          console.log(111)        
+        }
+    }
+ })
+
+
+
+</script>
